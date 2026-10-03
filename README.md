@@ -5,41 +5,29 @@ This is a project for my portfolio/personal page
 thyrogi/ 
 
    assets/
-   - folder for page 
-
+    folder for page assets 
       audio/
-      - folder for audio files
-
+       folder for audio files
       css/
-      - folder for general and page-specific 
-      
+       folder for general and page-specific 
       fonts/
-      - folder for different fonts
-
+        folder for different fonts
       img/
-      - folder for 
-      
+       folder for 
       page_pieces/
-      - folder for reusable page 
-      
+       folder for reusable page 
       rom/
-      - static data folder
-
+       static data folder
       rwm/
-   - malleable data 
-      
+       malleable data 
    js/
-   - contains the javascript 
-   
+    contains the javascript 
    php/
-   - contains the php 
-   
+    contains the php scripts
       json/
-      - contains json related scripts
-
+       contains json related scripts
    public/
-   - all viewable pages
-
+    all viewable pages
       project_pages/
-      - project specific 
+       project specific 
       
