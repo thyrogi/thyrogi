@@ -1,28 +1,61 @@
 <?php
-    // ---------- DYNAMIC BASE URL (Works everywhere!) ----------
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
-    $host = $_SERVER['HTTP_HOST'];
-    
-    // Get the folder path (e.g., '/soul_games' or '' if at root)
-    $script_dir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
-    
-    // Build the full base URL
-    define('BASE_URL', $protocol . $host . $script_dir);
-    
-    // ---------- ASSET PATHS (For the browser) ----------
+    // ============================================================
+    //  SERVER CONFIGURATION
+    //  Defines file-path and URL constants used across the site.
+    //  Should be required once, near the top of every page.
+    //  Expected location: thyrogi/php/server_config.php
+    // ============================================================
+
+    // ---------- SERVER FILE PATHS (used by PHP) ----------
+    // dirname(__DIR__) goes up from thyrogi/php/ to thyrogi/
+    define('ROOT_PATH', dirname(__DIR__) . '/');
+
+    define('ASSETS_PATH', ROOT_PATH . 'assets/');
+    define('AUDIO_PATH',  ASSETS_PATH . 'audio/');
+    define('CSS_PATH',    ASSETS_PATH . 'css/');
+    define('FONTS_PATH',  ASSETS_PATH . 'fonts/');
+    define('IMG_PATH',    ASSETS_PATH . 'img/');
+    define('PIECE_PATH',  ASSETS_PATH . 'page_pieces/');
+    define('ROM_PATH',    ASSETS_PATH . 'rom/');
+    define('RWM_PATH',    ASSETS_PATH . 'rwm/');
+
+    define('JS_PATH',   ROOT_PATH . 'js/');
+    define('PHP_PATH',  ROOT_PATH . 'php/');
+    define('JSON_PATH', PHP_PATH . 'json/');
+
+    define('PUBLIC_PATH',        ROOT_PATH . 'public/');
+    define('PROJECT_PAGES_PATH', PUBLIC_PATH . 'project_pages/');
+
+    // ---------- URLs (used by the browser) ----------
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+        ? 'https://'
+        : 'http://';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+
+    // Work out the URL subfolder the site lives in, e.g. "/thyrogi"
+    // (or "" if the site is at the domain root). We do this by comparing
+    // the filesystem path of the project against the web server's
+    // document root. If this ever returns the wrong thing in your
+    // environment, replace the if/else below with a hardcoded string.
+    $docRoot  = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/\\');
+    $rootPath = rtrim(ROOT_PATH, '/\\');
+
+    if ($docRoot !== '' && strpos($rootPath, $docRoot) === 0) {
+        $basePath = substr($rootPath, strlen($docRoot)); // e.g. "/thyrogi"
+    } else {
+        $basePath = '';
+    }
+
+    define('BASE_URL', $protocol . $host . $basePath);
+
     define('ASSETS_URL', BASE_URL . '/assets/');
-    define('CSS_URL', ASSETS_URL . 'css/');
-    define('JS_URL', ASSETS_URL . 'js/');
-    
-    // ---------- SERVER FILE PATHS (For PHP) ----------
-    // ROOT_PATH points to the folder where THIS config file is located
-    // Since this file is in /includes/, dirname(__DIR__) goes up one level to /soul_games/
-    define('ROOT_PATH', dirname(__DIR__));
-    
-    define('INCLUDES_PATH', ROOT_PATH . '/includes/');
-    define('DATA_PATH', ROOT_PATH . '/data/');
-    define('OFFICIAL_DATA_PATH', DATA_PATH . 'official_data/');
-    define('USER_DATA_PATH', DATA_PATH . 'user_data/');
-    define('SAVED_GAMES_PATH', USER_DATA_PATH . 'saved_games/');
-    define('SIM_PRESETS_PATH', USER_DATA_PATH . 'simulation_presets/');
+    define('AUDIO_URL',  ASSETS_URL . 'audio/');
+    define('CSS_URL',    ASSETS_URL . 'css/');
+    define('FONTS_URL',  ASSETS_URL . 'fonts/');
+    define('IMG_URL',    ASSETS_URL . 'img/');
+    define('PIECE_URL',  ASSETS_URL . 'page_pieces/');
+    define('ROM_URL',    ASSETS_URL . 'rom/');
+    define('RWM_URL',    ASSETS_URL . 'rwm/');
+
+    define('JS_URL', BASE_URL . '/js/');
 ?>
