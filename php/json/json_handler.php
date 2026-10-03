@@ -2,31 +2,31 @@
     class JsonHandlerException extends RuntimeException {} 
 
     // READ AND WRITE FUNCTIONS
-    function readJsonFile($jsonPath){
-        $data = file_get_contents($jsonPath);
+    function readJsonFile($file_path){
+        $data = file_get_contents($file_path);
 
         if ($data === false) {
-            throw new JsonHandlerException("Couldn't read from file " . $jsonPath);
+            throw new JsonHandlerException("Couldn't read from file " . $file_path);
         }
         
         try { 
             return decodeJson($data);
         } catch(JsonHandlerException $e) {
-            throw new JsonHandlerException("Invalid JSON in " . $jsonPath, 0, $e);
+            throw new JsonHandlerException("Invalid JSON in " . $file_path, 0, $e);
         }
     }
 
-    function writeJsonFile($jsonPath, $data){
+    function writeJsonFile($file_path, $data){
         try { 
             $encoded = encodeJson($data);
         } catch(JsonHandlerException $e) {
-            throw new JsonHandlerException("Encoding failed for " . $jsonPath, 0, $e);
+            throw new JsonHandlerException("Encoding failed for " . $file_path, 0, $e);
         }
 
-        $result = file_put_contents($jsonPath, $encoded, LOCK_EX);
+        $result = file_put_contents($file_path, $encoded, LOCK_EX);
 
         if($result === false){
-            throw new JsonHandlerException("Failed to write data into " . $jsonPath);
+            throw new JsonHandlerException("Failed to write data into " . $file_path);
         }
         
         return true;

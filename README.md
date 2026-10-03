@@ -1,9 +1,6 @@
 This is a project for my portfolio/personal page
 
 # ABOUT FILES
-
-    (all folders have '.gitkeep' in them, so that they exist even if no actual files are in them.)
-
     thyrogi/
 
         assets/
@@ -51,7 +48,7 @@ This is a project for my portfolio/personal page
             json/
              contains json related scripts
 
-             jsonHandler.php
+             json_handler.php
               includes functions to read and write into json files, as well as decode and encode functions
 
         public/
