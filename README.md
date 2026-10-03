@@ -10,7 +10,7 @@ This is a project for my portfolio/personal page
             css/
              folder for general and page-specific css
             fonts/
-            folder for different fonts
+             folder for different fonts
             img/
              folder for images
             page_pieces/
