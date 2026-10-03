@@ -10,6 +10,10 @@
         <title></title>
     </head>
     <body>
-        
+        <?php require_once '../assets/page_pieces/header.php' ?>
+        oi body
+
+
+        <?php require_once '../assets/page_pieces/footer.php' ?>
     </body>
 </html>
