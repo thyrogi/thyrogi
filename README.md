@@ -32,6 +32,7 @@ This is a project for my portfolio/personal page
 
                 quotes.json
                  all of my quotes that appear throughout the pages
+                 
             rwm/
              malleable data folder
 
@@ -45,14 +46,11 @@ This is a project for my portfolio/personal page
         php/
          contains the php scripts
 
-            json/
-             contains json related scripts
-
-             json_handler.php
-              includes functions to read and write into json files, as well as decode and encode functions
+            json_handler.php
+             includes functions to read and write into json files, as well as decode and encode functions
         
-        server_config.php
-         sets up server configurations such as filepaths
+            server_config.php
+             sets up server configurations such as filepaths
 
         public/
          all viewable pages
