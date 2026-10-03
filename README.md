@@ -50,6 +50,9 @@ This is a project for my portfolio/personal page
 
              json_handler.php
               includes functions to read and write into json files, as well as decode and encode functions
+        
+        server_config.php
+         sets up server configurations such as filepaths
 
         public/
          all viewable pages
