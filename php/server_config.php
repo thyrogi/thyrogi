@@ -39,6 +39,9 @@
     $docRoot  = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/\\');
     $rootPath = rtrim(ROOT_PATH, '/\\');
 
+    $docRoot  = str_replace('\\', '/', $docRoot);
+    $rootPath = str_replace('\\', '/', $rootPath);
+
     if ($docRoot !== '' && strpos($rootPath, $docRoot) === 0) {
         $basePath = substr($rootPath, strlen($docRoot)); // e.g. "/thyrogi"
     } else {
