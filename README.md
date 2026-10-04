@@ -12,9 +12,9 @@ This is a project for my portfolio/personal page
             css/
              folder for general and page-specific css
 
-                main_style.css
-                 the general css style used
-                 by pages with no theme
+               main_style.css
+                the general css style used
+                by pages with no theme
 
             fonts/
              folder for different fonts
@@ -25,25 +25,25 @@ This is a project for my portfolio/personal page
             page_pieces/
              folder for reusable page parts
 
-                footer.php
-                 footer section
+               footer.php
+                footer section
 
-                header.php
-                 header section
+               header.php
+                header section
 
             rom/
              static data (read only memory)
 
-                quotes.json
-                 all of my quotes that appear throughout the pages
+               languages
+                contains all of the text per languages
                  
             rwm/
              malleable data (read write memory)
 
-                default_settings.json
-                 includes the default server settings, which currently are:
-                 - default-language: english
-                 - theme: dark
+               default_settings.json
+                includes the default server settings, which currently are:
+                - default-language: english
+                - theme: dark
         js/
          contains the javascript scripts
 
