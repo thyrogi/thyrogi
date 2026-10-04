@@ -57,6 +57,6 @@
     define('RWM_URL',    ASSETS_URL . 'rwm/');
 
     define('JS_URL',            BASE_URL . '/js/');
-    define('PUBLIC_URL',        BASE_URL . '/public/')
-    define('PROJECT_PAGES_URL', PUBLIC_URL .'project_pages/')
+    define('PUBLIC_URL',        BASE_URL . '/public/');
+    define('PROJECT_PAGES_URL', PUBLIC_URL .'project_pages/');
 ?>
