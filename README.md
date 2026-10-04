@@ -40,8 +40,8 @@ This is a project for my portfolio/personal page
             rwm/
              malleable data (read write memory)
 
-                user_settings.json
-                 includes all of the user's settings, which currently are:
+                default_settings.json
+                 includes the default server settings, which currently are:
                  - default-language: english
                  - theme: dark
         js/
