@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__ . '/../php/server_config.php';
-    require_once PHP_PATH . 'jsonHandler.php';
+    require_once PHP_PATH . 'json_handler.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,7 @@
             // change the title depending on the language
         ?>
         <title></title>
+        <link rel="stylesheet" href="<?= CSS_URL ?>main_style.css">
     </head>
     <body>
         <?php require_once '../assets/page_pieces/header.php'; ?>

@@ -12,6 +12,10 @@ This is a project for my portfolio/personal page
             css/
              folder for general and page-specific css
 
+                main_style.css
+                 the general css style used
+                 by pages with no theme
+
             fonts/
              folder for different fonts
 
@@ -28,15 +32,15 @@ This is a project for my portfolio/personal page
                  header section
 
             rom/
-             static data 
+             static data (read only memory)
 
                 quotes.json
                  all of my quotes that appear throughout the pages
                  
             rwm/
-             malleable data folder
+             malleable data (read write memory)
 
-                usersettings.json
+                user_settings.json
                  includes all of the user's settings, which currently are:
                  - default-language: english
                  - theme: dark
