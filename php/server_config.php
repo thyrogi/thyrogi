@@ -27,7 +27,7 @@
     define('PHP_PATH',  ROOT_PATH . 'php/');
     define('SETTINGS_PATH',   PHP_PATH . 'settings/');
     define('CLASSES_PATH',    PHP_PATH . 'classes/');
-    define('EXCEPTIONS_PATH', PHP_PATH . 'exceptions/');
+    define('EXCEPTIONS_PATH', CLASSES_PATH . 'exceptions/');
 
     define('PUBLIC_PATH',        ROOT_PATH . 'public/');
     define('PROJECT_PAGES_PATH', PUBLIC_PATH . 'project_pages/');
