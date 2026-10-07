@@ -51,6 +51,15 @@ This is a project for my portfolio/personal page
         php/
          contains the php scripts
 
+            classes/
+             contains all php classes
+
+                exceptions/
+                 contains all exception classes
+                
+                    exceptions.php
+                     same thing idk
+
             json_handler.php
              includes functions to read and write into json files, as well as decode and encode functions
         
