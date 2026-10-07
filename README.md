@@ -36,14 +36,15 @@ This is a project for my portfolio/personal page
 
                languages
                 contains all of the text per languages
-                 
-            rwm/
-             malleable data (read write memory)
 
                default_settings.json
                 includes the default server settings, which currently are:
                 - default-language: english
                 - theme: dark
+                 
+            rwm/
+             malleable data (read write memory)
+
         js/
          contains the javascript scripts
 

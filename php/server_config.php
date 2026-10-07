@@ -14,9 +14,10 @@
     define('AUDIO_PATH',  ASSETS_PATH . 'audio/');
     define('CSS_PATH',    ASSETS_PATH . 'css/');
     define('FONTS_PATH',  ASSETS_PATH . 'fonts/');
-    define('IMAGE_PATH',    ASSETS_PATH . 'img/');
+    define('IMAGE_PATH',  ASSETS_PATH . 'img/');
     define('PIECE_PATH',  ASSETS_PATH . 'page_pieces/');
     define('ROM_PATH',    ASSETS_PATH . 'rom/');
+    define('LANG_PATH',   ROM_PATH . 'languages/');
     define('RWM_PATH',    ASSETS_PATH . 'rwm/');
 
     define('JS_PATH',   ROOT_PATH . 'js/');
