@@ -1,7 +1,6 @@
 <?php
     require_once __DIR__ . '/../php/server_config.php';
     require_once PHP_PATH . 'json_handler.php';
-
     require_once SETTINGS_PATH . 'settings_handler.php';
 
     $settings = getUserSettings();

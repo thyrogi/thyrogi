@@ -1,5 +1,5 @@
 <?php
-    class JsonHandlerException extends RuntimeException {} 
+    require_once EXCEPTIONS_PATH . 'exceptions.php';
 
     // READ AND WRITE FUNCTIONS
     function readJsonFile($file_path){

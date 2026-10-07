@@ -16,14 +16,18 @@
     define('FONTS_PATH',  ASSETS_PATH . 'fonts/');
     define('IMAGE_PATH',  ASSETS_PATH . 'img/');
     define('PIECE_PATH',  ASSETS_PATH . 'page_pieces/');
+
     define('ROM_PATH',    ASSETS_PATH . 'rom/');
     define('LANG_PATH',   ROM_PATH . 'languages/');
+
     define('RWM_PATH',    ASSETS_PATH . 'rwm/');
 
     define('JS_PATH',   ROOT_PATH . 'js/');
-    define('PHP_PATH',  ROOT_PATH . 'php/');
 
-    define('SETTINGS_PATH', PHP_PATH . 'settings/');
+    define('PHP_PATH',  ROOT_PATH . 'php/');
+    define('SETTINGS_PATH',   PHP_PATH . 'settings/');
+    define('CLASSES_PATH',    PHP_PATH . 'classes/');
+    define('EXCEPTIONS_PATH', PHP_PATH . 'exceptions/');
 
     define('PUBLIC_PATH',        ROOT_PATH . 'public/');
     define('PROJECT_PAGES_PATH', PUBLIC_PATH . 'project_pages/');
