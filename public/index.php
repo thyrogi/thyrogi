@@ -1,10 +1,12 @@
 <?php
     require_once __DIR__ . '/../php/server_config.php';
     require_once PHP_PATH . 'json_handler.php';
+
+    require_once SETTINGS_PATH . 'settings_handler.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $settings['default-language'] ?>" data-theme="<?= $settings['theme'] ?>">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +18,7 @@
     </head>
     <body>
         <?php require_once '../assets/page_pieces/header.php'; ?>
-        
+
         oi body
 
         <?php require_once '../assets/page_pieces/footer.php'; ?>

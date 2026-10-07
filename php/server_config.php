@@ -22,6 +22,8 @@
     define('JS_PATH',   ROOT_PATH . 'js/');
     define('PHP_PATH',  ROOT_PATH . 'php/');
 
+    define('SETTINGS_PATH', PHP_PATH . 'settings/');
+
     define('PUBLIC_PATH',        ROOT_PATH . 'public/');
     define('PROJECT_PAGES_PATH', PUBLIC_PATH . 'project_pages/');
 
