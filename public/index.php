@@ -18,10 +18,10 @@
         <link rel="stylesheet" href="<?= CSS_URL ?>main_style.css">
     </head>
     <body>
-        <?php require_once '../assets/page_pieces/header.php'; ?>
+        <?php require_once PIECE_PATH . 'header.php'; ?>
 
         oi body
 
-        <?php require_once '../assets/page_pieces/footer.php'; ?>
+        <?php require_once PIECE_PATH . 'footer.php'; ?>
     </body>
 </html>
