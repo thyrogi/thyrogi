@@ -1,6 +1,8 @@
 <?php
     require_once EXCEPTIONS_PATH . 'exceptions.php';
 
+    define('SETTINGS_COOKIE_NAME', 'user_settings');
+
     define('DEFAULT_SETTINGS', readJsonFile(ROM_PATH . 'default_settings.json'));
 
     define('ALLOWED_SETTINGS', [
@@ -16,7 +18,7 @@
     function getUserSettings(){
         $settings = DEFAULT_SETTINGS;
 
-        $cookieJson = $_COOKIE['user_settings'] ?? null;
+        $cookieJson = $_COOKIE[SETTINGS_COOKIE_NAME] ?? null;
         if($cookieJson === null) return $settings;
 
         try{
@@ -36,19 +38,33 @@
         return $settings;
     }
 
-    // setUserSettings(key, value)
     function setUserSettings($key, $value) {
-        if(!in_array($key, ALLOWED_SETTINGS, true)) return false;
+        if(!in_array($key, ALLOWED_SETTINGS, true)) {
+            throw new SettingsHandlerException("Unknown setting: " . $key);
+        }
 
-        if(!in_array($value, ALLOWED_VALUES[$key], true)) return false;
+        if(!in_array($value, ALLOWED_VALUES[$key], true)) {
+            throw new SettingsHandlerException("Invalid value for " . $key . ":" . $value);
+        }
 
         $currentSettings = getUserSettings();
         $currentSettings[$key] = $value;
         $encodedSettings = encodeJson($currentSettings);
     
-        setcookie()
+        setcookie(
+            SETTINGS_COOKIE_NAME,
+            $encodedSettings,
+            time() + 60 * 60 * 24 * 365,
+            '/'
+        );
     }
 
-    // clearUserSettings()
-
+    function clearUserSettings() {
+        setcookie(
+            SETTINGS_COOKIE_NAME,
+            '',
+            time() - 1,
+            '/'
+        );
+    }
 ?>

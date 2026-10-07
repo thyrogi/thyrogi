@@ -39,7 +39,7 @@ This is a project for my portfolio/personal page
 
                default_settings.json
                 includes the default server settings, which currently are:
-                - default-language: english
+                - language: english
                 - theme: dark
                  
             rwm/
