@@ -48,6 +48,10 @@ This is a project for my portfolio/personal page
         js/
          contains the javascript scripts
 
+            settings_dropdown.js
+             contains the script for the settings changer dropdown button
+             in the header of pages
+
         php/
          contains the php scripts
 
