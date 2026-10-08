@@ -12,7 +12,7 @@
 
     define('ALLOWED_VALUES', [
         'theme'    => ['light', 'dark'],
-        'language' => ['en-uk', 'pt-br']
+        'language' => ['en-GB', 'pt-BR']
     ]);
     
     function getUserSettings(){
