@@ -23,5 +23,6 @@
         oi body
 
         <?php require_once PIECE_PATH . 'footer.php'; ?>
+        <script src="<?= JS_URL ?>settings_dropdown.js"></script>
     </body>
 </html>

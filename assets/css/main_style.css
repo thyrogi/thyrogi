@@ -1,3 +1,26 @@
+:root[data-theme="dark"] {
+    --bg:   #1a1a1a;
+    --surface: ;
+    --text: #eee;
+    --text-muted: ;
+    --accent: ;
+    --border: ;
+}
+
+:root[data-theme="light"] {
+    --bg:   #fcf1df;
+    --surface: ;
+    --text: #222;
+    --text-muted: ;
+    --accent: ;
+    --border: ;
+}
+
 body {
-    background-color: rgb(252, 241, 223);
+    transition:
+        background-color 0.2s,
+        color 0.2s;
+
+    background-color: var(--bg);
+    color: var(--text);
 }
